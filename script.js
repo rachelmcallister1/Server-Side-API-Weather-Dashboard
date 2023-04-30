@@ -4,7 +4,18 @@ var rachelsApiKey = "456a7e9735edfb94add235f30b48824d";
 
 //connect to the form element in the HTML page and I need to run the search function
 var inputElement = document.getElementById("cityInput");
-// I need to connect to the items I want to output to on the HTML
+// I need to connect to the items I want to output to on the HTML //update these
+
+var cityNameEl = document.getElementById("cityName").textContent;
+
+var cityTempEl = document.getElementById("cityTemp").textContent;
+var cityWindEl = document.getElementById("cityWind").textContent;
+var cityHumidityEl = document.getElementById("cityHumidity");
+
+fetch(requestUrl)
+.then(res => res.json())
+.then(data => console.log(data))
+.catch(error => console.log('ERROR'))
 
 //Once I've connected to all of those and created the search function, then I will need to create a function to display the elemnts and the needed info on the HTML page. 
 
