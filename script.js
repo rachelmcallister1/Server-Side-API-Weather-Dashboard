@@ -3,10 +3,11 @@ var requestUrl = "http://api.openweathermap.org/data/2.5/forecast?id=524901&appi
 var rachelsApiKey = "456a7e9735edfb94add235f30b48824d";
 
 //connect to the form element in the HTML page and I need to run the search function
-var inputElement = document.getElementById('searchBar');
+var inputElement = document.getElementById("cityInput");
 // I need to connect to the items I want to output to on the HTML
 
 //Once I've connected to all of those and created the search function, then I will need to create a function to display the elemnts and the needed info on the HTML page. 
+
 // I need the function to find the forcast elemtents 
 // I need to connect to the page elemnts that will display the forecast and display elemtents 
 // Save the searches to local storage 
