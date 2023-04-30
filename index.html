@@ -2,35 +2,30 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
 </head>
 
 <body>
-    <h1>Weather Dashboard</h1>
-    <!-- we will need form for searching for cities. the form element   -->
-    <form>
-        <input
-        id= "cityInput"
-        class= "seachBar"
-        type="text"
-        placeholder="Enter A City Name"
-        />
-        <!-- <form name ="search" id="searchBar" action="#">
+  <h1>Weather Dashboard</h1>
+  <!-- we will need form for searching for cities. the form element   -->
+  <form>
+    <input id="cityInput" class="seachBar" type="text" placeholder="Enter A City Name" />
+    <!-- <form name ="search" id="searchBar" action="#">
         <label for="search">Search for a city:</label><br>
         <input type="text">
         <input placeholder="Enter A City Name" -->
     <input type="submit" value="Submit">
-    </form>
-    <!-- Then I need a place to display all of the elements for the current weather -->
+  </form>
+  <!-- Then I need a place to display all of the elements for the current weather -->
   <div class="column">
-    <div id="weatherStats" class="columns box content"> 
-        <h2 id="cityName"></h2>\
-        <h3 id="cityTemp"></h3>
-        <h3 id="cityWind"></h3>
-        <h3 id="cityHumdity"></h3>
+    <div id="weatherStats" class="columns box content">
+      <h2 id="cityName"></h2>\
+      <h3 id="cityTemp"></h3>
+      <h3 id="cityWind"></h3>
+      <h3 id="cityHumdity"></h3>
     </div>
   </div>
   <div class="column card">
@@ -43,9 +38,26 @@
     </div>
     <!-- place to display all the elemnts for the future weather  -->
 
+    <div class="fiveDay">
+      <h2>5-Day Forecast</h2>
+      <div class="row">
+        <p class="sectionTitle">Day 1</p>
+        <p class="sectionSubtitle">Temperature: <span class="fiveDayTemp"></span>
+          &deg;F</p>
+        <p class="sectionSubtitle">Wind: <span class="fiveDayWind"></span>
+          &deg;F</p>
+        <p class="sectionSubtitle">Humidity: <span class="fiveDayHumidity"></span>%</p>
+      </div>
 
-    <!-- Add a search history element on the HTML page -->
-  
+
+
+
+
+
+
+
+  <!-- Add a search history element on the HTML page -->
+
 </body>
 <script src="./script.js"></script>
 

@@ -18,7 +18,7 @@ let cityWindText = document.getElementById("cityWind").textContent;
 var cityHumidityEl = document.getElementById("cityHumdity")
 let cityHumidityText = document.getElementById("cityHumdity").textContent;
 
-// function getWeather ()
+
 fetch(requestUrl, {
     method: 'POST',
     body: JSON.stringify({})
