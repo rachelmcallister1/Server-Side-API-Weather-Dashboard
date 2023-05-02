@@ -13,16 +13,14 @@
   <!-- we will need form for searching for cities. the form element   -->
   <form>
     <input id="cityInput" class="seachBar" type="text" placeholder="Enter A City Name" />
-    <!-- <form name ="search" id="searchBar" action="#">
-        <label for="search">Search for a city:</label><br>
-        <input type="text">
-        <input placeholder="Enter A City Name" -->
-    <input type="submit" value="Submit">
+    <button id="submitbutton"> Search </button>
   </form>
   <!-- Then I need a place to display all of the elements for the current weather -->
+
+  <!-- place to display all the elemnts for the future weather  -->
   <div class="column">
     <div id="weatherStats" class="columns box content">
-      <h2 id="cityName"></h2>\
+      <h2 id="cityName"></h2>
       <h3 id="cityTemp"></h3>
       <h3 id="cityWind"></h3>
       <h3 id="cityHumdity"></h3>
@@ -36,21 +34,40 @@
       <h4 id="wind1" class="has-text-white"></h4>
       <h4 id="hum1" class="has-text-white"></h4>
     </div>
-    <!-- place to display all the elemnts for the future weather  -->
-
-    <div class="fiveDay">
-      <h2>5-Day Forecast</h2>
-      <div class="row">
-        <p class="sectionTitle">Day 1</p>
-        <p class="sectionSubtitle">Temperature: <span class="fiveDayTemp"></span>
-          &deg;F</p>
-        <p class="sectionSubtitle">Wind: <span class="fiveDayWind"></span>
-          &deg;F</p>
-        <p class="sectionSubtitle">Humidity: <span class="fiveDayHumidity"></span>%</p>
+    <div class="column card">
+      <div id="day2" class="card-content">
+        <h3 id="date2" class="has-text-white"></h3>
+        <h4 id="temp2" class="has-text-white"></h4>
+        <h4 id="wind2" class="has-text-white"></h4>
+        <h4 id="hum2" class="has-text-white"></h4>
       </div>
+      <div class="column card">
+        <div id="day3" class="card-content">
+          <h3 id="date3" class="has-text-white"></h3>
+          <h4 id="temp3" class="has-text-white"></h4>
+          <h4 id="wind3" class="has-text-white"></h4>
+          <h4 id="hum3" class="has-text-white"></h4>
+        </div>
+        <div class="column card">
+          <div id="day4" class="card-content">
+            <h3 id="date4" class="has-text-white"></h3>
+            <h4 id="temp4" class="has-text-white"></h4>
+            <h4 id="wind4" class="has-text-white"></h4>
+            <h4 id="hum4" class="has-text-white"></h4>
+          </div>
+          <div class="column card">
+            <div id="day5" class="card-content">
+              <h3 id="date5" class="has-text-white"></h3>
+              <h4 id="temp5" class="has-text-white"></h4>
+              <h4 id="wind5" class="has-text-white"></h4>
+              <h4 id="hum5" class="has-text-white"></h4>
+            </div>
+    
+
+  
 
 
-  <!-- Add a search history element on the HTML page -->
+              <!-- Add a search history element on the HTML page -->
 
 </body>
 <script src="./script.js"></script>

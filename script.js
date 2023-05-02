@@ -18,15 +18,37 @@ let cityWindText = document.getElementById("cityWind").textContent;
 var cityHumidityEl = document.getElementById("cityHumdity")
 let cityHumidityText = document.getElementById("cityHumdity").textContent;
 
+// var submitButton = document.getElementById("cityInput")
 
-fetch(requestUrl, {
-    method: 'POST',
-    body: JSON.stringify({})
-}).then(res => {
-    return res.json()
-})
-    .then(data => console.log(data))
-    .catch(error => console.log('ERROR'))
+
+function fetchWeather(city) {
+    var requestUrl = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=456a7e9735edfb94add235f30b48824d&units=imperial"
+    var rachelsApiKey = "456a7e9735edfb94add235f30b48824d";
+
+    fetch(requestUrl, {
+        method: 'GET',
+    })
+        .then(res => {
+            return res.json();
+        })
+        .then(data => {
+            cityNameEl.innerText= data.city.name //adding name of city on screen 
+            cityTempEl.innerText= data.list[0].main.temp 
+            cityWindEl.innerText= data.list[0].wind.speed 
+            cityHumidityEl.innerText= data.list[0].main.humidity + "string"
+            console.log(data)
+            var index=1
+            for (i=7; i<data.list.length; i=i+8){
+                document.getElementById("date"+index).innerText=data.list[i].dt
+                document.getElementById("temp"+index).innerText=data.list[i].main.temp
+                document.getElementById("wind"+index).innerText=data.list[i].wind.speed
+                document.getElementById("wind"+index).innerText=data.list[i].main.humidity
+                index++ //add dayjs after innertext
+            }
+        }) //putting in curly brackets so we can do more than one line 
+        .catch(error => console.log(error))
+}
+
 
 //Once I've connected to all of those and created the search function, then I will need to create a function to display the elemnts and the needed info on the HTML page. 
 
@@ -38,3 +60,28 @@ fetch(requestUrl, {
 // connecting the previous searches to rerun  if they are clicked on 
 
 // add CSS after the fact to display everything 
+
+// create a function that will run when the form is submitted
+
+function displayMedia() {
+    fetchWeather();
+}
+// 1. addEventListener to form submit
+const submitButton = document.querySelector('#submitbutton');
+submitButton.addEventListener('click', function (event) {
+    console.log('Button Clicked!');
+    event.preventDefault()
+    var city = inputElement.value
+    //add local storage here, take city etc. 
+    fetchWeather(city)
+
+})
+
+
+// 1. addEventListener to form submit
+// 2. create function that will run when the form is submitted
+// 3. This function should get the values found inside the input element of the form and pass it to another function that then makes a call to the openweather api using it
+// So this will take care of a user inputting a city and once user clicks on submit the function should fetch data for that city from the openweather api
+
+
+
