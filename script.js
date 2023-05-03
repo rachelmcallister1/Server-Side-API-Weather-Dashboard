@@ -32,17 +32,17 @@ function fetchWeather(city) {
             return res.json();
         })
         .then(data => {
-            cityNameEl.innerText= data.city.name //adding name of city on screen 
-            cityTempEl.innerText= data.list[0].main.temp  + "Fahrenheit"
-            cityWindEl.innerText= data.list[0].wind.speed + "MPH"
-            cityHumidityEl.innerText= data.list[0].main.humidity + "%"
+            cityNameEl.innerText = data.city.name //adding name of city on screen 
+            cityTempEl.innerText = data.list[0].main.temp + "Fahrenheit"
+            cityWindEl.innerText = data.list[0].wind.speed + "MPH"
+            cityHumidityEl.innerText = data.list[0].main.humidity + "%"
             console.log(data)
-            var index=1
-            for (i=7; i<data.list.length; i=i+8){
-                document.getElementById("date"+index).innerText=data.list[i].dt 
-                document.getElementById("temp"+index).innerText=data.list[i].main.temp + " Fahrenheit"
-                document.getElementById("wind"+index).innerText=data.list[i].wind.speed + " MPH"
-                document.getElementById("wind"+index).innerText=data.list[i].main.humidity + " %"
+            var index = 1
+            for (i = 7; i < data.list.length; i = i + 8) {
+                document.getElementById("date" + index).innerText = data.list[i].dt
+                document.getElementById("temp" + index).innerText = data.list[i].main.temp + " Fahrenheit"
+                document.getElementById("wind" + index).innerText = data.list[i].wind.speed + " MPH"
+                document.getElementById("wind" + index).innerText = data.list[i].main.humidity + " %"
                 index++ //add dayjs after innertext
             }
         }) //putting in curly brackets so we can do more than one line 
