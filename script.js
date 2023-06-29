@@ -39,8 +39,7 @@ function fetchWeather(city) {
             console.log(data)
             var index = 1
             for (i = 7; i < data.list.length; i = i + 8) {
-                // document.getElementById("date" + index).innerText = data.list[i].dt
-                
+                document.getElementById("date" + index).innerText = data.list[i].dt_txt
                 document.getElementById("temp" + index).innerText = data.list[i].main.temp + " Fahrenheit"
                 document.getElementById("wind" + index).innerText = data.list[i].wind.speed + " MPH"
                 document.getElementById("wind" + index).innerText = data.list[i].main.humidity + " %"
